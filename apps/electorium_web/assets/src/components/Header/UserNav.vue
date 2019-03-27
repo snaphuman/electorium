@@ -1,6 +1,6 @@
 <template>
   <nav id="user-nav" class="navbar">
-    <div class="container">
+    <div class="container is-fluid">
       <div class="navbar-brand">
         <router-link class="navbar-item" to="/">ELECTORIUM</router-link>
         <span class="navbar-burguer burguer" data-target="navbar-user-menu">

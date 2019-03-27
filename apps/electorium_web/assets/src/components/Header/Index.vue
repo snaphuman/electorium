@@ -4,7 +4,7 @@
       <UserNav></UserNav>
     </div>
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="container is-fluid has-text-centered">
         <h1 class="title">Electorium</h1>
         <h2 class="subtitle">A better experience of School Elections with transparency, efficiency and security of blockhain3 in realtime</h2>
       </div>
