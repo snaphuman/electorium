@@ -4,7 +4,7 @@
       Administrar Colegio
     </p>
     <ul class="menu-list">
-      <li>Perfil del colegio</li>
+      <li><router-link to="/dashboard/school">Perfil del colegio</router-link</li>
       <li>Estudiantes</li>
       <li>Votación</li>
     </ul>
