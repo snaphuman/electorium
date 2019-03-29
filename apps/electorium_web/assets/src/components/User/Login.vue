@@ -3,7 +3,7 @@
   <div class="modal-background" @click="close"></div>
   <div class="modal-content">
     <div class="box">
-      <h1>Login</h1>
+      <h1 class="title">Login</h1>
       <div class="field">
         <p class="control has-icons-left has-icons-right">
           <input class="input" type="email" placeholder="Email">

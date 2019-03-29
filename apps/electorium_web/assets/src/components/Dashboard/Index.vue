@@ -4,7 +4,7 @@
     <div class="column is-3">
       <Sidebar></Sidebar>
     </div>
-    <div class="columne is-9">
+    <div class="column is-9">
       <AdminContent></AdminContent>
     </div>
   </div>
