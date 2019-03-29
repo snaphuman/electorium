@@ -7,20 +7,22 @@ defmodule ElectoriumWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug ElectoriumWeb.Auth
   end
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug :fetch_session
+    plug ElectoriumWeb.Auth
   end
 
   scope "/", ElectoriumWeb do
     pipe_through :browser
 
     get "/", PageController, :index
-  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ElectoriumWeb do
-  #   pipe_through :api
-  # end
+    # User management
+    resources "/users", UserController, only: [:index, :show, :new, :create]
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
+  end
 end

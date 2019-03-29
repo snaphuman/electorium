@@ -22,6 +22,7 @@ defmodule ElectoriumWeb do
       use Phoenix.Controller, namespace: ElectoriumWeb
       import Plug.Conn
       import ElectoriumWeb.Gettext
+      import ElectoriumWeb.Auth, only: [authenticate_user: 2, authenticate_api_user: 2]
       alias ElectoriumWeb.Router.Helpers, as: Routes
     end
   end
@@ -49,6 +50,7 @@ defmodule ElectoriumWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import ElectoriumWeb.Auth, only: [authenticate_user: 2, authenticate_api_user: 2]
     end
   end
 

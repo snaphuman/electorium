@@ -38,7 +38,9 @@ defmodule Electorium.MixProject do
     [
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
-      {:jason, "~> 1.0"}
+      {:jason, "~> 1.0"},
+      {:comeonin, "~> 5.1"},
+      {:pbkdf2_elixir, "~> 1.0"}
     ]
   end
 

@@ -4,11 +4,13 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Electorium · Phoenix Framework</title>
+    <title>Electorium</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
     <main role="main">
+      <li><%= link "Register", to: Routes.user_path(@conn, :new), class: "btn btn-link" %></li>
+      <li><%= link "Log in", to: Routes.session_path(@conn, :new), class: "btn btn-link" %></li>
       <%= render @view_module, @view_template, assigns %>
     </main>
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
