@@ -19,9 +19,8 @@
         <div class="control">
           <div class="select">
             <select>
-              <option>Teusaquillo</option>
-              <option>Sumapaz</option>
-              <option>JSON</option>
+              <option selected disabled>Seleccione</option>
+              <option v-for="location in locations" v-bind:value="location">{{ location }}</option>
             </select>
           </div>
         </div>
@@ -45,3 +44,5 @@
     </form>
   </div>
 </template>
+
+<script src="@/services/SchoolForm.js">
