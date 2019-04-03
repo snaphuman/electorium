@@ -6,6 +6,8 @@ import Dashboard from '@/components/Dashboard/Index'
 import School from '@/components/Dashboard/School'
 import SchoolProfile from '@/components/Dashboard/SchoolProfile'
 import SchoolForm from '@/components/Dashboard/SchoolForm'
+import UserProfile from '@/components/User/Profile'
+import ResetPassword from '@/components/User/ResetPassword'
 
 Vue.use(Router)
 
@@ -21,7 +23,8 @@ export default new Router({
                     { path: 'edit', name: 'SchoolForm', component: SchoolForm }
                 ]
               },
-
+              { path: 'user', name: 'UserProfile', component: UserProfile },
+              { path: 'reset-password', name: 'ResetPassword', component: ResetPassword}
           ]
         }
     ]

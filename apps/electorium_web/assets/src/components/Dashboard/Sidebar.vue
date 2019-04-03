@@ -19,8 +19,8 @@
       Administrar usuario 
     </p>
     <ul class="menu-list">
-      <li>Perfil de usuario</li>
-      <li>Cambiar contraseña</li>
+      <li><router-link to="/dashboard/user">Perfil de usuario</router-link></li>
+      <li><router-link to="/dashboard/reset-password">Cambiar contraseña</router-link></li>
     </ul>
   </aside>
 </template>
