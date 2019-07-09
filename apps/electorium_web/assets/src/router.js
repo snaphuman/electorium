@@ -7,6 +7,13 @@ import School from '@/components/Dashboard/School'
 import SchoolProfile from '@/components/Dashboard/SchoolProfile'
 import SchoolForm from '@/components/Dashboard/SchoolForm'
 import UserProfile from '@/components/User/Profile'
+import Student from '@/components/Dashboard/Student'
+import StudentList from '@/components/Dashboard/StudentList'
+import StudentProfile from '@/components/Dashboard/StudentProfile'
+import StudentForm from '@/components/Dashboard/StudentForm'
+import CandidateForm from '@/components/Dashboard/CandidateForm'
+import CandidateList from '@/components/Shared/CandidateList'
+import CandidateProfile from '@/components/Shared/CandidateProfile'
 import ResetPassword from '@/components/User/ResetPassword'
 
 Vue.use(Router)
@@ -23,10 +30,21 @@ export default new Router({
                     { path: 'edit', name: 'SchoolForm', component: SchoolForm }
                 ]
               },
+              {
+                path: 'student', name: 'Student', component: Student,
+                children: [
+                    { path: 'list', name: 'StudentList', component: StudentList },
+                    { path: 'edit/:id', name: 'StudentProfile', component: StudentProfile },
+                    { path: 'edit', name: 'StudentForm', component: StudentForm },
+                    { path: 'set-candidate', name: 'CandidateForm', component: CandidateForm }
+                ]
+              },
               { path: 'user', name: 'UserProfile', component: UserProfile },
               { path: 'reset-password', name: 'ResetPassword', component: ResetPassword}
           ]
-        }
+        },
+        { path: 'list', name: 'CandidateList', component: CandidateList },
+        { path: ':id', name: 'CandidateProfile', component: CandidateProfile }
     ]
 })
 

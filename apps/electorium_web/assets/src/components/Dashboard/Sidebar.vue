@@ -5,7 +5,7 @@
     </p>
     <ul class="menu-list">
       <li><router-link to="/dashboard/school">Perfil del colegio</router-link</li>
-      <li>Estudiantes</li>
+      <li><router-link to="/dashboard/student/list">Estudiantes</router-link</li>
       <li>Votación</li>
     </ul>
     <p class="menu-label">
