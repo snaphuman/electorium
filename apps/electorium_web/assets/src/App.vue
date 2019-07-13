@@ -1,7 +1,14 @@
 <template>
 <div id="app">
-  <Header></Header>
-  <router-view></router-view>
+  <div class="container is-fluid">
+    <Header></Header>
+  </div>
+  <div class="container is-fluid">
+    <flash-message class="message"></flash-message>
+  </div>
+  <div class="container is-fluid">
+    <router-view></router-view>
+  </div>
 </div>
 </template>
 
