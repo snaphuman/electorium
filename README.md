@@ -1,6 +1,6 @@
 # Welcome to Electorium: The trustworthy voting system for student elections.
 
-This is a Aeternity Dapp thas uses the power of Phoenix Framework and VueJS.
+This is an Aeternity Dapp thas uses the power of Phoenix Framework and VueJS.
 
 ## Pre-requsites
 
