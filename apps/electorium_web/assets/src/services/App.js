@@ -38,6 +38,5 @@ export default {
     },
     async created() {
         await this.getClient();
-        console.log(this.client);
     }
 };

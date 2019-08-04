@@ -43,17 +43,45 @@
         </label>
       </div>
       <CandidateForm v-if="student.isCandidate" v-bind:getCandidateData.sync="candidateData" disableSubmit></CandidateForm>
-      <div class="field">
-        <label class="label">Wallet</label>
-        <div class="field has-addons">
-          <div class="control">
-            <input class="input" type="text" disabled>
-          </div>
-          <div class="control">
-            <a class="button is-info">Generar</a>
+
+      <nav class="panel">
+        <p class="panel-heading">
+          Wallet
+        </p>
+        <div class="panel-block">
+          <div class="field is-horizontal">
+            <div class="field-label is-small">
+              <label class="label">Public key</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control is-expanded">
+                  <input class="input is-fullwidth" type="text" v-model="keypair.publicKey" readonly>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="panel-block">
+          <div class="field is-horizontal">
+            <div class="field-label is-small">
+              <label class="label">Private key</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" type="text" v-model="keypair.secretKey" readonly>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-block">
+          <button class="button is-link is-outlined is-fullwidth" @click="genKeypair">
+            Re-generate keypair
+          </button>
+        </div>
+      </nav>
       <div class="field">
         <div class="control">
           <button class="button is-primary" @click="save">Guardar</button>
@@ -64,3 +92,9 @@
 </template>
 
 <script src="@/services/Student.js" />
+
+<style lang="css" scoped>
+  .field.is-horizontal {
+  width: 100%;
+  }
+</style>

@@ -4,13 +4,14 @@ export default class Student extends Model {
 
     static entity  = 'students';
 
-    static primayKey = 'address';
+    static primayKey = 'publicKey';
 
     static fields () {
 
         return {
 
-            address: this.attr(''),
+            publicKey: this.attr(null),
+            secretKey: this.attr(''),
             name: this.attr(''),
             lastname: this.attr(''),
             email: this.attr(''),

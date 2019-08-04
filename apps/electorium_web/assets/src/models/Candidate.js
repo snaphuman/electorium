@@ -5,16 +5,16 @@ export default class Candidate extends Model {
 
     static entity = 'candidates';
 
-    static primaryKey = 'address';
+    static primaryKey = 'publicKey';
 
     static fields () {
 
         return {
 
-            address: this.attr(''),
+            publicKey: this.attr(null),
             nomination: this.attr(''),
             proposal: this.attr(''),
-            student: this.belongsTo(Student, 'address')
+            student: this.belongsTo(Student, 'publicKey')
         };
     }
 }

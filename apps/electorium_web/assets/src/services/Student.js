@@ -1,3 +1,4 @@
+import * as Crypto from '@aeternity/aepp-sdk/es/utils/crypto';
 import Student from '@/models/Student';
 import Candidate from '@/models/Candidate';
 import CandidateForm from '@/components/Dashboard/CandidateForm';
@@ -7,7 +8,8 @@ export default {
     data: function() {
         return {
             candidateData: {},
-            student: {}
+            student: {},
+            keypair: {}
         };
     },
 
@@ -17,7 +19,13 @@ export default {
 
     methods: {
 
+        genKeypair() {
+            this.keypair = Crypto.generateKeyPair();
+        },
         save() {
+
+            Object.assign(this.student, this.keypair);
+
             try {
                 Student.insert({ data: this.student });
                 if (this.student.isCandidate)
@@ -36,6 +44,10 @@ export default {
         studentList: function () {
             this.$emit('update:students', this.studentList);
         }
+    },
+
+    created() {
+        this.genKeypair();
     }
 
 };
