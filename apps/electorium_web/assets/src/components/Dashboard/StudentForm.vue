@@ -42,7 +42,7 @@
           Es Candidato(a)
         </label>
       </div>
-      <CandidateForm v-if="student.isCandidate" v-bind:getCandidateData.sync="candidateData" disableSubmit></CandidateForm>
+      <CandidateForm v-if="student.isCandidate" v-bind:getCandidateData.sync="candidateData" v-bind:enableSubmit="false"></CandidateForm>
 
       <nav class="panel">
         <p class="panel-heading">

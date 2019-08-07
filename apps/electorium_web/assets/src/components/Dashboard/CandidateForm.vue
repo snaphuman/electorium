@@ -23,7 +23,7 @@
           <textarea class="textarea" type="text" placeholder="Ingrese la propuesta completa del candidato" v-model="candidate.proposal"></textarea>
         </div>
       </div>
-      <div class="field" v-if="disableSubmit">
+      <div class="field" v-if="enableSubmit">
         <div class="control">
           <button class="button is-primary">Guardar</button>
         </div>

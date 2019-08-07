@@ -5,7 +5,7 @@ export default {
         };
     },
 
-    props: [ 'disableSubmit' ],
+    props: [ 'enableSubmit' ],
 
     watch: {
         candidate: function () {
