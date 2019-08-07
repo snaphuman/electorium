@@ -32,11 +32,11 @@
       </table>
     </div>
     <div class="modal" v-bind:class="{'is-active': showModal }">
-      <div class="modal-background"></div>
+      <div class="modal-background" @click="toggleModal()"></div>
       <div class="modal-content">
         <CandidateForm v-if="showCandidateForm" v-bind:getCandidateData.sync="candidateData"></CandidateForm>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+      <button class="modal-close is-large" aria-label="close" @click="toggleModal()"></button>
     </div>
   </div>
 </template>

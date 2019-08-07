@@ -22,9 +22,20 @@ export default {
 
     methods: {
 
+        toggleModal () {
+
+            this.showModal = this.showModal ? false : true;
+        },
         showCandidateModal(id) {
-            console.log(id);
-            this.showModal = this.showCandidateForm = true;
+
+            let student = Student.query()
+                .where('publicKey', id)
+                .get();
+
+            if (student[0].isCandidate === false) return;
+
+            this.toggleModal();
+            this.showCandidateForm = true;
         }
     }
 };
