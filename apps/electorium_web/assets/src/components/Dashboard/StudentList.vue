@@ -8,6 +8,8 @@
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Email</th>
+            <th>Curso</th>
+            <th>Candidato</th>
             <th>Detalles</th>
           </tr>
         </thead>
@@ -16,10 +18,25 @@
             <td>{{ student.name }}</td>
             <td>{{ student.lastname }}</td>
             <td>{{ student.email }}</td>
+            <td>{{ student.course }}</td>
+            <td>
+              <div class="field">
+                <b-switch v-model="student.isCandidate" @input="showCandidateModal(student.publicKey)">
+                  {{ student.isCandidate }}
+                </b-switch>
+              </div>
+            </td>
             <td><a class="button is-info">Ver</a></td>
           </tr>
         </tbody>
       </table>
+    </div>
+    <div class="modal" v-bind:class="{'is-active': showModal }">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <CandidateForm v-if="showCandidateForm" v-bind:getCandidateData.sync="candidateData"></CandidateForm>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </div>
 </template>
