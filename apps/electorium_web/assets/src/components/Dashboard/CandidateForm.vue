@@ -25,7 +25,7 @@
       </div>
       <div class="field" v-if="enableSubmit">
         <div class="control">
-          <button class="button is-primary">Guardar</button>
+          <button class="button is-primary" @click="save()">Guardar</button>
         </div>
       </div>
     </form>

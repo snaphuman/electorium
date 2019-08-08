@@ -8,7 +8,8 @@ export default {
         return {
             showModal: false,
             showCandidateForm: false,
-            candidateData: {}
+            candidateData: {},
+            studentId: ''
         };
     },
 
@@ -34,6 +35,8 @@ export default {
 
             if (student[0].isCandidate === false) return;
 
+            this.studentId = id;
+            console.log(this.studentId);
             this.toggleModal();
             this.showCandidateForm = true;
         }

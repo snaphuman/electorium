@@ -34,7 +34,7 @@
     <div class="modal" v-bind:class="{'is-active': showModal }">
       <div class="modal-background" @click="toggleModal()"></div>
       <div class="modal-content">
-        <CandidateForm v-if="showCandidateForm" v-bind:getCandidateData.sync="candidateData" v-bind:enableSubmit="true"></CandidateForm>
+        <CandidateForm v-if="showCandidateForm" v-bind:getCandidateData.sync="candidateData" v-bind:id="studentId" v-bind:enableSubmit="true"></CandidateForm>
       </div>
       <button class="modal-close is-large" aria-label="close" @click="toggleModal()"></button>
     </div>
