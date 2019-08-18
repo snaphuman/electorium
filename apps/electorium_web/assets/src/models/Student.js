@@ -4,7 +4,7 @@ export default class Student extends Model {
 
     static entity  = 'students';
 
-    static primayKey = 'publicKey';
+    static primaryKey = 'publicKey';
 
     static fields () {
 
