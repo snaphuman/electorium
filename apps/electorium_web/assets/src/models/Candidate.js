@@ -14,7 +14,7 @@ export default class Candidate extends Model {
             publicKey: this.attr(null),
             nomination: this.attr(''),
             proposal: this.attr(''),
-            student: this.belongsTo(Student, 'publicKey')
+            student: this.belongsTo(Student, 'publicKey', 'publicKey')
         };
     }
 }

@@ -24,13 +24,19 @@ export default {
         },
         save() {
 
-            Object.assign(this.student, this.keypair);
+            let student = Object.assign(this.student, this.keypair);
+            console.log(student);
+            console.log(this.candidateData);
 
             try {
-                Student.insert({ data: this.student });
-                if (this.student.isCandidate)
+                Student.insert({ data: student });
+                if (this.student.isCandidate){
+
+                    let candidate = Object.assign(this.candidateData, {publicKey: student.publicKey});
+
                     Candidate.insert({
-                        data: this.candidateData});
+                        data: candidate});
+                }
 
                 this.flash('Student Saved', 'success');
             } catch (err) {
