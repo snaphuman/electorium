@@ -24,20 +24,9 @@ export default {
         },
         save() {
 
-            let student = Object.assign(this.student, this.keypair);
-            console.log(student);
-            console.log(this.candidateData);
-
             try {
+                let student = Object.assign(this.student, this.keypair);
                 Student.insert({ data: student });
-                if (this.student.isCandidate){
-
-                    let candidate = Object.assign(this.candidateData, {publicKey: student.publicKey});
-
-                    Candidate.insert({
-                        data: candidate});
-                }
-
                 this.flash('Student Saved', 'success');
             } catch (err) {
                 this.flash('Something went wrong', 'error');

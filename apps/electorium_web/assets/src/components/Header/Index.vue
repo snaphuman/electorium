@@ -1,18 +1,19 @@
 <template>
-  <section v-if="isRouteName==='Home'" id="header" class="hero is-primary is-medium">
+  <section v-if="isRouteName==='Dashboard'" id="header">
+    <AdminNav></AdminNav>
+  </section>
+  <section v-else id="header" class="hero is-primary">
     <div class="hero-head">
       <UserNav></UserNav>
     </div>
     <div class="hero-body">
-        <h1 class="title">Electorium</h1>
-        <h2 class="subtitle">A better experience of School Elections with transparency, efficiency and security of blockhain3 in realtime</h2>
+      <div class="container">
+        <h1 class="title">Nombre Colegio</h1>
+      </div>
     </div>
     <div class="hero-foot">
       <MainNav></MainNav>
     </div>
-  </section>
-  <section v-else id="header">
-    <AdminNav></AdminNav>
   </section>
 </template>
 

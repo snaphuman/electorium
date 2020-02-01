@@ -3,10 +3,10 @@
     <div class="container is-fluid">
       <ul>
         <li>
-          <router-link to="/">Home</router-link>
+          <router-link to="/">Inicio</router-link>
         </li>
         <li>
-          <router-link to="/candidate/list">Candidatos</router-link>
+          <router-link to="/candidate/add">Postular</router-link>
         </li>
       </ul>
     </div>

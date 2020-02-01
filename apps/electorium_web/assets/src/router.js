@@ -43,7 +43,7 @@ export default new Router({
               { path: 'reset-password', name: 'ResetPassword', component: ResetPassword}
           ]
         },
-        { path: 'list', name: 'CandidateList', component: CandidateList },
+        { path: '/candidate/add', name: 'CandidateForm', component: CandidateForm },
         { path: ':id', name: 'CandidateProfile', component: CandidateProfile }
     ]
 })
