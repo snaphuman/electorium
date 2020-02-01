@@ -9,14 +9,14 @@
       <li>Votación</li>
     </ul>
     <p class="menu-label">
-      Administrar Contrato 
+      Administrar Contrato
     </p>
     <ul class="menu-list">
       <li>Detalles</li>
       <li>Transacciones</li>
     </ul>
     <p class="menu-label">
-      Administrar usuario 
+      Administrar usuario
     </p>
     <ul class="menu-list">
       <li><router-link to="/dashboard/user">Perfil de usuario</router-link></li>
