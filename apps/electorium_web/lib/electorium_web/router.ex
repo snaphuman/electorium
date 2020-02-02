@@ -17,6 +17,11 @@ defmodule ElectoriumWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+  end
+
+  scope "/api/v1", ElectoriumWeb do
+    pipe_through :api
+
     post "/students/new", StudentController, :create
   end
 
