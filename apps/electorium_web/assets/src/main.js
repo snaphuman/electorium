@@ -7,6 +7,8 @@ import 'buefy/dist/buefy.css';
 import 'vue-flash-message/dist/vue-flash-message.min.css';
 import VueFlashMessage from 'vue-flash-message';
 
+import "phoenix_html"
+
 Vue.use(Buefy);
 Vue.use(VueFlashMessage);
 Vue.config.productionTip = false;
@@ -16,4 +18,3 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app');
-
