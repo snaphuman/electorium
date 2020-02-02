@@ -17,6 +17,7 @@ defmodule ElectoriumWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    post "/students/new", StudentController, :create
   end
 
   # Other scopes may use custom stacks.
