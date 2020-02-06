@@ -1,12 +1,12 @@
-defmodule Electorium.Vote do
+defmodule Electorium.Students do
   @moduledoc """
-  The Vote context.
+  The Students context.
   """
 
   import Ecto.Query, warn: false
   alias Electorium.Repo
 
-  alias Electorium.Vote.Student
+  alias Electorium.Students.Student
 
   @doc """
   Returns the list of students.

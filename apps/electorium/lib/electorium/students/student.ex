@@ -1,4 +1,4 @@
-defmodule Electorium.Vote.Student do
+defmodule Electorium.Students.Student do
   use Ecto.Schema
   import Ecto.Changeset
 
