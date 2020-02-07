@@ -13,7 +13,7 @@ export default class Student extends Model {
             publicKey: this.attr(''),
             secretKey: this.attr(''),
             name: this.attr(''),
-            lastname: this.attr(''),
+            last_name: this.attr(''),
             email: this.attr(''),
             course: this.attr(''),
             isCandidate: this.attr(false),

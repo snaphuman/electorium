@@ -22,6 +22,8 @@ defmodule ElectoriumWeb do
       use Phoenix.Controller, namespace: ElectoriumWeb
       import Plug.Conn
       import ElectoriumWeb.Gettext
+
+      alias Electorium.Repo
       alias ElectoriumWeb.Router.Helpers, as: Routes
     end
   end

@@ -22,7 +22,7 @@ defmodule ElectoriumWeb.Router do
   scope "/api/v1", ElectoriumWeb do
     pipe_through :api
 
-    post "/students/new", StudentController, :create
+    post "/students", StudentController, :create
   end
 
   # Other scopes may use custom stacks.

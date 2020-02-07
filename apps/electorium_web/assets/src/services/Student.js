@@ -22,11 +22,14 @@ export default {
         genKeypair() {
             this.keypair = Crypto.generateKeyPair();
         },
-        save() {
+        async save() {
 
             try {
                 let student = Object.assign(this.student, this.keypair);
                 Student.insert({ data: student });
+                const result = await Student.api().post('students', student);
+                console.log(result.response.status);
+                console.log(result.entities);
                 this.flash('Student Saved', 'success');
             } catch (err) {
                 this.flash('Something went wrong', 'error');

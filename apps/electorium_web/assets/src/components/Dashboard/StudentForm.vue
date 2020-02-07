@@ -11,7 +11,7 @@
       <div class="field">
         <label class="label">Apellidos</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Ingrese los apellidos del estudiante" v-model="student.lastname">
+          <input class="input" type="text" placeholder="Ingrese los apellidos del estudiante" v-model="student.last_name">
         </div>
       </div>
       <div class="field">

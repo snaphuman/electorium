@@ -2,6 +2,12 @@ defmodule Electorium.Students.Student do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder, only: [:name,
+                                 :last_name,
+                                 :email,
+                                 :course,
+                                 :isCandidate
+                                ]}
 
   schema "students" do
     field :publicKey, :string
@@ -19,7 +25,7 @@ defmodule Electorium.Students.Student do
   def changeset(student, attrs \\ %{}) do
     student
     |> cast(attrs, [:publicKey,
-                   :privateKey,
+                   :secretKey,
                    :name,
                    :last_name,
                    :email,
