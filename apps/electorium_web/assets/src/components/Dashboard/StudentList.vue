@@ -16,7 +16,7 @@
         <tbody>
           <tr :key="student.publicKey" v-for="student in students">
             <td>{{ student.name }}</td>
-            <td>{{ student.lastname }}</td>
+            <td>{{ student.last_name }}</td>
             <td>{{ student.email }}</td>
             <td>{{ student.course }}</td>
             <td>{{ student.isCandidate }}</td>

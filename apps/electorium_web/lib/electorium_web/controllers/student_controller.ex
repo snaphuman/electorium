@@ -4,10 +4,6 @@ defmodule ElectoriumWeb.StudentController do
   alias Electorium.Students.Student
 
   def create(conn, params) do
-    IO.puts "++++"
-    IO.inspect conn
-    IO.puts "++++"
-    IO.inspect params
 
     changeset = Student.changeset(%Student{}, params)
 
@@ -17,6 +13,12 @@ defmodule ElectoriumWeb.StudentController do
       {:error, _changeset} ->
         json conn |> put_status(:bad_request), %{errors: ["Unable to create student"]}
     end
+  end
+
+  def index(conn, _params) do
+
+    students = Repo.all(Student)
+    json conn, students
   end
 
 end

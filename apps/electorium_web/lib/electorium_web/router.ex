@@ -22,6 +22,7 @@ defmodule ElectoriumWeb.Router do
   scope "/api/v1", ElectoriumWeb do
     pipe_through :api
 
+    get "/students", StudentController, :index
     post "/students", StudentController, :create
   end
 
