@@ -1,5 +1,4 @@
 import { Model } from '@vuex-orm/core';
-import Candidate from './Candidate';
 
 export default class Student extends Model {
 
@@ -18,8 +17,6 @@ export default class Student extends Model {
             course: this.attr(''),
             isCandidate: this.attr(false),
             votedAt: this.number(0),
-            candidate_id: this.attr(''),
-            candidate: this.belongsTo(Candidate, 'candidate_id')
             //vote: this.attr('')
         };
     };

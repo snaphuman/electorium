@@ -1,29 +1,32 @@
-export default {
+import Student from '@/models/Student';
+import Candidate from '@/models/Candidate';
 
-    props: [ 'enableSubmit', 'id' ],
+export default {
 
     data: function() {
         return {
-            candidate: { },
-            studentId: this.id
+            candidate: {},
+            student: {},
         };
     },
 
-    watch: {
-        candidate: function () {
-            this.$emit('update:getCandidateData', this.candidate);
-        }
-    },
-
     methods: {
-        // this method only works when is called from
-        // students list
-        save() {
-            console.log("actualizar", this.studentId);
-        }
-    },
 
-    created () {
-        console.log(this.studentId);
+        async save() {
+
+            try {
+                let candidate = Object.assign(this.candidate, this.student);
+                console.log(candidate);
+                const result = await Candidate.api().post('candidates', candidate);
+                console.log(result.response.status);
+                console.log(result.entities);
+                this.flash('Candidate Saved', 'success');
+
+            } catch(err) {
+                this.flash('Something went wrong', 'error');
+                console.log(err);
+
+            }
+        }
     }
 };

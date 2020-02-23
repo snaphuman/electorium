@@ -1,7 +1,6 @@
 import * as Crypto from '@aeternity/aepp-sdk/es/utils/crypto';
 import Student from '@/models/Student';
 import Candidate from '@/models/Candidate';
-import CandidateForm from '@/components/Dashboard/CandidateForm';
 
 export default {
 
@@ -12,8 +11,6 @@ export default {
             keypair: {}
         };
     },
-
-    components: { CandidateForm },
 
     props: [ 'students' ],
 
