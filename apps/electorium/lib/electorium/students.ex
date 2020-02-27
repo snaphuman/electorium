@@ -38,6 +38,14 @@ defmodule Electorium.Students do
   def get_student!(id), do: Repo.get!(Student, id)
 
   @doc """
+  Gets a single student by pubkey.
+  """
+  def get_student_by_pubkey!(pubkey) do
+    query = from s in Student, where: s.publicKey == ^pubkey
+    Repo.one!(query)
+  end
+
+  @doc """
   Creates a student.
 
   ## Examples
