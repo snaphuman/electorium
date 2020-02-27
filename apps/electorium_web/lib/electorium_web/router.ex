@@ -10,6 +10,7 @@ defmodule ElectoriumWeb.Router do
   end
 
   pipeline :api do
+    plug CORSPlug, origin: "http://localhost:4000"
     plug :accepts, ["json"]
   end
 
@@ -22,13 +23,12 @@ defmodule ElectoriumWeb.Router do
   scope "/api/v1", ElectoriumWeb do
     pipe_through :api
 
+    options "/candidates", CandidateController, :options
+    post "/candidates", CandidateController, :create
+
+    options "/students", StudentController, :options
     get "/students", StudentController, :index
     post "/students", StudentController, :create
-    post "/candidates", CandidateController, :create
+    get "/students/:pubkey", StudentController, :show
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", ElectoriumWeb do
-  #   pipe_through :api
-  # end
 end

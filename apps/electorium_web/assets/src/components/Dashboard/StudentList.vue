@@ -20,7 +20,7 @@
             <td>{{ student.email }}</td>
             <td>{{ student.course }}</td>
             <td>{{ student.isCandidate }}</td>
-            <td><a class="button is-info">Ver</a></td>
+            <td><a class="button is-info" v-bind:href="'/api/v1/students/' + student.publicKey">Ver</a></td>
           </tr>
         </tbody>
       </table>
