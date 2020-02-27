@@ -2,11 +2,14 @@ defmodule Electorium.Students.Student do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Electorium.Students.Candidate
+
   @derive {Jason.Encoder, only: [:name,
                                  :last_name,
                                  :email,
                                  :course,
-                                 :isCandidate
+                                 :isCandidate,
+                                 :publicKey
                                 ]}
 
   schema "students" do
@@ -17,6 +20,7 @@ defmodule Electorium.Students.Student do
     field :email, :string
     field :course, :string
     field :isCandidate, :boolean
+    has_one :candidate, Candidate
 
     timestamps()
   end

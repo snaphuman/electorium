@@ -24,6 +24,7 @@ defmodule ElectoriumWeb.Router do
 
     get "/students", StudentController, :index
     post "/students", StudentController, :create
+    post "/candidates", CandidateController, :create
   end
 
   # Other scopes may use custom stacks.
